@@ -1,38 +1,27 @@
-import { GoBellFill, GoHeartFill, GoStarFill } from 'react-icons/go';
-import Button from './components/Button';
+import Accordion from './components/Accordion';
 
 function App() {
-  const handleClick = () => {
-    console.log('click!');
-  };
+  const items = [
+    {
+      id: 'oweiuj98',
+      label: 'React',
+      content:
+        'Lorem ipsum delorum. Lorem ipsum delorum. Lorem ipsum delorum. Lorem ipsum delorum.',
+    },
+    {
+      id: 'ajlksi24',
+      label: 'JavaScript',
+      content: 'A bi blue joey. A bi blue joey. A bi blue joey.',
+    },
+    {
+      id: 'zmoewe32',
+      label: 'CSS',
+      content:
+        'Yer a wizard harry. Yer a wizard harry. Yer a wizard harry. Yer a wizard harry.',
+    },
+  ];
 
-  return (
-    <div>
-      <div>
-        <Button primary rounded onClick={handleClick} className="mb-5">
-          <GoBellFill /> Click me
-        </Button>
-      </div>
-      <div>
-        <Button secondary outline>
-          <GoHeartFill /> Buy Now
-        </Button>
-      </div>
-      <div>
-        <Button success>
-          <GoStarFill /> Add to Cart
-        </Button>
-      </div>
-      <div>
-        <Button warning outline>
-          Register
-        </Button>
-      </div>
-      <div>
-        <Button danger>Sign Up</Button>
-      </div>
-    </div>
-  );
+  return <Accordion items={items} />;
 }
 
 export default App;
